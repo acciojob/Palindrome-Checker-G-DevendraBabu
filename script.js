@@ -2,21 +2,16 @@
 
 function palindrome(str)
 {
-	if(!str || str.length < 2 || 
-                typeof str!== 'string') { 
-            return 'Not valid'; 
-        } 
-          
-        
-        const revArray = []; 
-        const length = str.length - 1; 
-          
-        
-        for(let i = length; i >= 0; i--) { 
-            revArray.push(str[i]); 
-        } 
-          
-      
-        return revArray.join(''); 
+	const len = str.length;
+
+    // loop through half of the string
+    for (let i = 0; i < len / 2; i++) {
+
+        // check if first and last string are same
+        if (str[i] !== str[len - 1 - i]) {
+            return 'false';
+        }
+    }
+	return 'true';
 }
 module.exports = palindrome
