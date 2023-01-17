@@ -9,10 +9,11 @@ function palindrome(str)
 
        
         if (str[i].toLowerCase() !== str[len - 1 - i].toLowerCase()) {
-            console.log("false");
-			return 0;
+            // console.log("false");
+			return false;
         }
     }
-	console.log("true");
+	// console.log("true");
+	return true;
 }
 module.exports = palindrome
